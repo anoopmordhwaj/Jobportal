@@ -1,0 +1,374 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        @font-face {
+            font-family: 'crossiant';
+            src: url(/fonts/Croissant_One/CroissantOne-Regular.ttf);
+        }
+
+        :root{
+           --primary:hsla(192, 68%, 41%, 0.65);
+           --secondary:hsla(176, 48%, 41%, 0.638);
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(135deg, var(--primary), var(--secondary)), url(https://img.freepik.com/premium-vector/mid-century-modern-minimalist-art-print-abstract-contemporary-aesthetic-background-continuous-one-line-doodle-drawing_449361-273.jpg) no-repeat center /cover;
+
+            display: grid;
+            place-items: center;
+            place-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            color:white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 100px;
+            font-family: 'crossiant',sans-serif;
+            text-shadow: 5px 4px 5px #0000008e;
+            margin-top: 30;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        p{
+            font-size: 26px;
+            font-weight: normal;
+            margin-top: auto;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        div {
+            margin: 20px;
+        }
+
+        button1 {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.839);
+        padding: 10px 20px;
+        background-color: white;
+        color: #1a2980;
+        border: 2px solid #1a2980;
+        border-radius: 10px; 
+        cursor: pointer;
+        font-size: 42px;
+        margin-right: 260px;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+        button2 {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.839);
+        padding: 10px 20px;
+        background-color: white;
+        color: #1a2980;
+        border: 2px solid #1a2980;
+        border-radius: 10px; 
+        cursor: pointer;
+        font-size: 42px;
+        margin-right: 10px;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button1:hover {
+            background-color: #ff9900;
+        }
+
+        button2:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <header>
+        <h2>
+            Hi {{ user.username }}!
+        </h2>
+        <h1>UdyogSarthi</h1>
+        <h2>Welcomes you </h2><br><br>
+        <p>Discover a diverse range of career options tailored to your unique skills and personal preferences, all while engaging in continuous skill enhancement.</p><br><br>
+    </header>
+    <main>
+        <div>
+            <a href="../post_job/"><button1>Post Job</button1></a>
+            <a href="../applied_applicant/"><button2>View Applied Applicants</button2></a>
+        </div>
+    </main>
+    
+</body>
+</html> -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Path</title>
+    <style>
+    .main{
+      background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3440.jpg");
+      background-repeat: no-repeat;
+	background-size: cover;
+  position: relative;
+    }
+    /*****BANNER SECTION*****/
+.banner-section {  
+	background-image: url("https://i.pinimg.com/736x/a0/57/af/a057afe4ded4705c350f58f5be2521af.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 350px;
+	position: relative;
+	width: 100%;
+}
+.banner-heading {
+	font-size: 40px;
+	color: white;
+	padding-top: 70px
+}
+.banner-para {
+	font-size: 15px;
+	color: #fff;
+	padding-top: 10px;
+}
+
+.search-sect {
+	margin-top: 40px;
+	width: 25%;
+	float: left;
+	position: relative;
+}
+.search-textbox {
+	height: 40px;
+	width: 100%;
+	padding-left: 10px;
+	border-top: none;
+	border-bottom: none;
+	border-color: #d9d9d9;
+	border-right: none;
+	border-width: 1px;
+}
+.search-button {
+	width: 100%;
+	height: 40px;
+	background-color: #e34216;
+	border: none;
+	color: white;
+}
+.search-sect .icons {
+	position: absolute;
+	top: 12px;
+	right: 10px
+}
+/******FEATURE SECTION******/
+.feature-sect {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.feature-panel {
+	background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20210817/pngtree-pastel-pink-skin-tone-leather-texture-wallpaper-background-image_761847.jpg");
+	text-align: center;
+  background-repeat: no-repeat;
+	background-size: cover;
+	padding: 30px;
+	border: 1px solid #afb1b6;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.feature-title {
+	padding-top: 20px
+}
+
+.feature-desc {
+	margin-top: 10px;
+  
+}
+
+.feature-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 80px;
+	background-color: rgb(176, 81, 81);
+}
+
+.feature-btn {
+	background-color: #1650e2;
+	height: 35px;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 13px;
+	margin-top: 10px;
+	padding: 10px;
+}
+/******FOOTER SECTION******/
+
+
+.footer-list {
+	list-style: none;
+	line-height: 30px;
+	padding-top: 20px;
+}
+
+.footer-background {
+	background-color: #222328;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	color: rgba(255, 255, 255, .86);
+}
+
+
+
+.get-in-touch {
+	list-style: none;
+	line-height: 15px;
+	padding-top: 20px
+}
+
+.get-in-touch img {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	border-radius: 0px;
+	float: left;
+	padding-top: 20px
+}
+
+.get-in-touch i {
+	float: left;
+	color: #eb372a;
+	font-size: 16px;
+	line-height: 15px;
+}
+
+.get-in-touch p {
+	padding-left: 30px;
+	color: rgba(255, 255, 255, .86);
+	margin-top: 20px
+}
+
+/******FOOTER SECTION******/
+    </style>
+  </head>
+  <body class="main">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+
+        <h1><span class="badge badge-success mr-sm-2">INSTAHIRE</span></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active">
+              <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <h4>Courses <span class="badge badge-warning">OFFER</span></h4>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Search</button>
+
+            {% if not user.is_authenticated %}
+            <a href="login"><button type="button" class="btn btn-primary">Login</button></a>
+            {% else %}
+            <a href="../logout"><button type="button" class="btn btn-primary">Logout</button></a>          
+            {% endif %}
+          </form>
+        </div>
+      </nav>
+
+
+
+<!-------FEATURE SECTION FEATURE SECTION FEATURE SECTION------->
+<div class="width-100 feature-sect">
+  <div class="container">
+    <div class="width-50">
+      <div class="feature-panel">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/607/119/original/eye-care-logo-and-symbols-template-vector.jpg" class="feature-img">
+        <h4 class="feature-title">VIEW ALL APPLICANTS ?</h4>
+        <p class="feature-desc">You can see all the applicants that had recently applied to your posted jobs along with their resumes and other contact details..</p>
+        {% if not user.is_authenticated %}
+        <a href="../applied_applicant/"><button class="feature-btn">VIEW APPLICANTS</button></a>
+        {% else %}
+        <a href="../applied_applicant/"><button class="feature-btn">VIEW APPLICANTS</button></a>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="width-50">
+      <div class="feature-panel" style="margin-top: 65px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj4J-efAbIq1envLw9qhDyzcJQxf1kUXKpx6rPIQJg_k2EYcqwQOjxN9BrVufMORV5xYQ&usqp=CAU" class="feature-img">
+        <h4 class="feature-title"> POST NEW JOB ?</h4>
+        <p class="feature-desc">If youu want to post a new job you can click below..where you can specify all the credentials and information related to your job..</p>
+        
+        {% if not user.is_authenticated %}
+        <a href="../post_job/"><button class="feature-btn">POST JOB</button></a>
+        {% else %}
+        <a href="../post_job/"><button class="feature-btn">POST JOB</button></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+      
+    <div class="image ml-5 "><img src="https://teleporthq.io/design-to-code-header-1200w.png" alt=""></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

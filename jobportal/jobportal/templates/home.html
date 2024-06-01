@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        @font-face {
+            font-family: 'crossiant';
+            src: url(/fonts/Croissant_One/CroissantOne-Regular.ttf);
+        }
+
+        :root{
+           --primary:hsla(192, 68%, 41%, 0.65);
+           --secondary:hsla(176, 48%, 41%, 0.638);
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(135deg, var(--primary), var(--secondary)), url(https://img.freepik.com/premium-vector/mid-century-modern-minimalist-art-print-abstract-contemporary-aesthetic-background-continuous-one-line-doodle-drawing_449361-273.jpg) no-repeat center /cover;
+
+            display: grid;
+            place-items: center;
+            place-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            color:white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 100px;
+            font-family: 'crossiant',sans-serif;
+            text-shadow: 5px 4px 5px #0000008e;
+            margin-top: 30;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        p{
+            font-size: 26px;
+            font-weight: normal;
+            margin-top: auto;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        div {
+            margin: 20px;
+        }
+
+        button1 {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.839);
+        padding: 10px 20px;
+        background-color: white;
+        color: #1a2980;
+        border: 2px solid #1a2980;
+        border-radius: 10px; 
+        cursor: pointer;
+        font-size: 42px;
+        margin-right: 260px;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+        button2 {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.839);
+        padding: 10px 20px;
+        background-color: white;
+        color: #1a2980;
+        border: 2px solid #1a2980;
+        border-radius: 10px; 
+        cursor: pointer;
+        font-size: 42px;
+        margin-right: 10px;
+        transition: background-color 0.3s, color 0.3s;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button1:hover {
+            background-color: #ff9900;
+        }
+
+        button2:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <header>
+        {{request.user}}
+
+        <a href="/logout/"><button>logout</button></a>
+
+        <h1>UdyogSarthi</h1>
+        <h2>Welcomes you </h2><br><br>
+        <p>Discover a diverse range of career options tailored to your unique skills and personal preferences, all while engaging in continuous skill enhancement.</p><br><br>
+    </header>
+    <main>
+        <div>
+            <a href="../applicant/applicant_details"><button1>Applicant</button1></a>
+            <a href="../employer/employer_details"><button2>Employer</button2></a>
+        </div>
+        <!-- {% block body %}{% endblock body %} -->
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styler.css">
+
+    <style>:root{
+        --primary:hsla(192, 68%, 41%, 0.65);
+        --secondary:hsla(176, 48%, 41%, 0.638);
+     }
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(135deg, var(--primary), var(--secondary)), url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701401743.jpg) no-repeat center  /cover;
+        place-items: center;
+        place-content: center;
+        font-family: Arial, sans-serif;
+    }
+    
+    
+    /* Container for job details */
+    .job-details {
+        max-width: 600px;
+        margin: auto;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #e4e2e2;
+        color: black;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Job Role and Company Name */
+    .job-role {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    
+    .company-name {
+        color: #888;
+        font-size: 18px;
+    }
+    
+    /* Candidate Details Form */
+    .form-title {
+        font-size: 20px;
+        margin-top: 20px;
+        color: black;
+    }
+    
+    /* Form Label */
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: black;
+    }
+    
+    /* Form Input Fields */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 95%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    
+    /* File Input */
+    input[type="file"] {
+        margin-top: 5px;
+        color: black;
+    }
+    
+    /* Form Button */
+    .apply-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+    
+    .apply-button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+    <title>Apply now</title>
+</head>
+<body>
+    <div class="job-details">
+        {% for i in data %}
+        <h1 class="job-role">Applying for {{i.job_role}}</h1>
+        <p class="company-name">Company : {{i.company_name}}</p>
+       
+        <h2 class="form-title">Be a Early Applicant</h2>
+        
+        {% endfor %}
+       
+        <form method="post"  enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Upload PDF">
+        </form>  
+    </div>
+</body>
+</html>

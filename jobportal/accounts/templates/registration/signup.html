@@ -1,0 +1,28 @@
+<h2>signup</h2>
+<form  method="post">
+
+    {% csrf_token %}
+        <tr>
+          <th><label for="id_username">Username:</label></th>
+          <td><input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required id="id_username">
+            <br>
+            </td>
+        </tr>
+        <tr>
+          <th><label for="id_password1">Password:</label></th>
+          <td><input type="password" name="password1" autocomplete="new-password" required id="id_password1">
+            <br>
+            <span class="helptext">
+            
+            </span></td>
+        </tr>
+        <tr>
+          <th><label for="id_password2">Password confirmation:</label></th>
+          <td><input type="password" name="password2" autocomplete="new-password" required id="id_password2">
+            <br>
+            </td>
+        </tr>
+      
+    <button type="submit">sign in</button>
+
+</form>

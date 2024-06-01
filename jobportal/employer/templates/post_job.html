@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, rgba(2,0,36,1) 0%,rgba(75,14,154,1) 35%,rgba(0,212,255,1) 100%);
+        }
+        form {
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #11141c;
+    background-color: #bfcfff;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="number"]
+{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button[type="submit"] {
+    background-color: #000fff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: larger;
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.but{
+    display: flex;
+    justify-content: center;
+}
+    </style>
+    <title>Form</title>
+</head>
+<body>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <h1>Job Information</h1>
+        <label for="name">Company Name</label>
+        <input type="text" id="name" name="cname" required>
+
+        <label for="age">Company desc</label>
+        <input type="text" id="name" name="desc" required>
+        <br>
+
+        <label for="email">Location</label>
+        <input type="text" id="email" name="location" required>
+        <br>
+
+        <label for="no">Job role</label>
+        <input type="text" id="name" name="role" required>
+        <br>
+
+        <label for="gender">Job desc</label>
+        <input type="text" id="name" name="jdesc" required>
+        <br>
+
+        <label for="gender">Skill required</label>
+        <input type="text" id="name" name="skill" required>
+        <br>
+
+        <label for="gender">Dis type</label>
+        <input type="text" id="name" name="type" required>
+        <br>
+
+        <label for="company_name">Salary</label>
+        <input type="number" id="name" name="salary" required>
+        <br>
+         
+        <label for="address">Requied Experience</label>
+        <input type="number" id="email" name="experience" required>
+        <br> 
+
+        <label for="skills">Post date</label>
+        <input type="date" id="name" name="pdate" required>
+        <br>
+
+        <label for="skills">Last date</label>
+        <input type="date" id="name" name="ldate" required>
+<br>
+        <div class="but">
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>/* body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    } */
+    
+    :root{
+               --primary:hsla(192, 68%, 41%, 0.65);
+               --secondary:hsla(176, 48%, 41%, 0.638);
+            }
+            body {
+                /* height: 100vh;
+                width: 100vw; */
+                background: linear-gradient(135deg, var(--primary), var(--secondary)), url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701401743.jpg) no-repeat center  /cover;
+                display: grid;
+                place-items: center;
+                place-content: center;
+                margin: 0;
+                padding: 0;
+            }
+    
+    /* Container for job details */
+    .job-details {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Job Role and Company Name */
+    .job-role {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    
+    .company-name {
+        color: #888;
+        font-size: 18px;
+    }
+    
+    /* Icon styles */
+    .icons {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .icon {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .icon img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+    
+    .icon span {
+        font-size: 16px;
+        color: #444;
+    }
+    
+    /* Job Info Box */
+    .info-box {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+    }
+    
+    .info-box img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+    
+    .info-box span {
+        font-size: 14px;
+        color: #888;
+    }
+    
+    /* Job Description and Requirements */
+    .job-description-title,
+    .requirements-title {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .job-description ol,
+    .requirements ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    /* Salary, Perks, Openings */
+    .salary-title,
+    .perks-title {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .salary,
+    .perks {
+        font-size: 16px;
+        color: #444;
+    }
+    
+    .openings {
+        font-size: 16px;
+        color: #888;
+        margin-top: 5px;
+    }
+    
+    /* Apply Now Button */
+    .apply-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .apply-button:hover {
+        background-color: #0056b3;
+    }</style>
+    <title>Job Description</title>
+</head>
+
+
+
+
+<body>
+    
+    {% for i in data %}
+    
+    
+
+
+    <div class="job-details">
+        <h1 class="job-role">{{i.job_role}}</h1>
+        <p class="company-name">{{i.company_name}}</p>
+        <div class="icons">
+            <div class="icon">
+                <img src="https://e7.pngegg.com/pngimages/1016/542/png-clipart-black-house-house-computer-icons-home-automation-kits-real-estate-home-icon-angle-building-thumbnail.png" alt="Home Icon">
+                <span>Hybrid</span>
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/4305/4305512.png" alt="Money Icon">
+                <span>Salary: {{i.salary}}/month</span>
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/4164/4164916.png" alt="Suitcase Icon">
+                <span>Experience: {{i.requied_experience}} years</span>
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3889/3889548.png" alt="Hourglass Icon">
+                <span>Apply by: {{i.application_last_day}}</span>
+            </div>
+        </div>
+        <div class="job-info">
+            <div class="info-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/109/109613.png" alt="Clock Icon">
+                <span>Posted On: {{i.post_date}}</span>
+            </div>
+            <div class="info-box">
+                <img src="https://static.thenounproject.com/png/935874-200.png" alt="Type Icon">
+                <span>Type: Full-time Job</span>
+            </div>
+           
+            <div class="info-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/55/55281.png" alt="Calendar Icon">
+                <span>Hiring since Jan 2023</span>
+            </div>
+            <div class="info-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/5291/5291043.png" alt="Check Icon">
+                <span>121 candidates hired</span>
+            </div>
+            <div class="info-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3391/3391229.png" alt="Post Icon">
+                <span>178 opportunities posted</span>
+            </div>
+        </div>
+        <h2 class="job-description-title">Job Description</h2>
+        <p class="job-description">
+            Selected intern's day-to-day responsibilities include:
+            <ol>
+                {{i.company_desc}}
+            </ol>
+        </p>
+        <h2 class="requirements-title">Requirements</h2>
+        <p class="requirements">
+            <ol>
+                {{i.skill_required}}
+            </ol>
+        </p>
+        <h2 class="salary-title">Salary</h2>
+        <p class="salary">Annual CTC: {{i.salary }}/year</p>
+        <h2 class="perks-title">Perks</h2>
+        <p class="perks">5 days a week</p>
+        <p class="openings">Number of openings: 1</p>
+        <a href="../../apply_now/{{i.id}}/"><button class="apply-button">Apply Now</button></a>
+    </div>
+    {% endfor %}
+</body>
+</html>

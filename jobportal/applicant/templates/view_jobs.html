@@ -1,0 +1,265 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+</head>
+<body>
+    
+    {{data}}
+
+
+    {% for i in data %}
+      <p>{{i.company_name}}</p>
+      <p>{{i.company_desc}}</p>
+      <p>{{i.company_location}}</p>
+      <p>{{i.job_role}}</p>
+      <p>{{i.job_desc}}</p>
+      <p>{{i.salary}}</p>
+      <p>{{i.requied_experience}}</p>
+      <p>{{i.post_date}}</p>
+      <p>{{i.application_last_day}}</p>
+      <p>{{i.skill_required}}</p>
+      <p>{{i.dis_type}}</p>
+    {% endfor %}
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolife</title>
+    <style>
+        body,ul,h3,h2,h4 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(120deg, rgba(2,0,36,1) 0%,rgba(75,14,154,1) 35%,rgba(0,212,255,1) 100%);
+}
+.form1{
+    width:50%;
+}
+.conta{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 20%;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.container {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h3 {
+    font-size: 45px;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+h4 {
+    font-size: 35px;
+    margin-top: 10px;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    font-size: 25px;
+    margin-top: 6px;
+}
+
+button {
+    background-color: #000fff;
+    color: #fff;
+    padding: 20px 80px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+  </head>
+  <body>
+    
+
+<div class="form1">
+        
+    {% for i in data %}
+     
+
+    <div class="conta">
+        <div class="container">
+          <h4>{{i.company_name}}</h4>
+          <h3>{{i.job_role}}</h3>
+          <ul>
+            <li>{{i.company_location}}</li>
+            <li>{{i.salary}}</li>
+            <li>{{i.requied_experience}}</li>
+          </ul></div>
+          
+          <a href="../apply_now/{{i.id}}/"><button>Apply Now</button></a>
+          <a href="../job_details/{{i.id}}/"><button>View details</button></a>
+          
+        </div>
+
+        {% endfor %}
+    </div>
+     
+  </body>
+</html> -->
+
+    
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>view_jobs</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+
+        <h1><span class="badge badge-success mr-sm-2">INSTAHIRE</span></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto ">
+            <li class="nav-item active">
+              <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <h4>Courses <span class="badge badge-warning">OFFER</span></h4>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit">Search</button>
+
+            {% if not user.is_authenticated %}
+            <a href="login"><button type="button" class="btn btn-primary">Login</button></a>
+            {% else %}
+            <a href="../logout"><button type="button" class="btn btn-primary">Logout</button></a>          
+            {% endif %}
+          </form>
+        </div>
+      </nav>
+
+
+      <!-- Jobs Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Job Listing</h1>
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+                
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                       
+                        
+                       
+                   
+                           <div class="job-item p-4 mb-4">
+
+                            {% for i in data %}
+                            <div class="row g-4" style="    background-color: aquamarine;     margin-top: 42px;">
+                                <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                    <img class="flex-shrink-0 img-fluid border rounded" src="https://static.vecteezy.com/system/resources/previews/015/280/523/non_2x/job-logo-icon-with-tie-image-free-vector.jpg" alt="" style="width: 80px; height: 80px;">
+                                    <div class="text-start ps-4" style="    margin-left: 46px;">
+                                        <h5 class="mb-3" >Role: {{i.job_role}}</h5>
+                                        <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>Location: {{i.company_location}}, </span>
+                                        <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time, </span>
+                                        <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>Salary: ${{i.salary}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                    <div class="d-flex mb-3" style="    margin-top: 16px;">
+                        
+                                        <a class="btn btn-primary" href="../apply_now/{{i.id}}/">Apply Now</a>
+                                    </div>
+                                    <a class="btn btn-primary" href="../job_details/{{i.id}}/">View details</a>
+                                    <small class="text-truncate" style="    margin-top: 13px;     margin-bottom: 9px;"><i class="far fa-calendar-alt text-primary me-2"></i>Dead Line: 01 Jan, 2024</small>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <a class="btn btn-primary py-3 px-5" href="">Browse More Jobs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Jobs End -->
+
+
+  
+          <!-- {{i.company_name}} -->
+         
+            <!-- {{i.requied_experience}} -->
+         
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>  
+
+
+      

@@ -1,0 +1,115 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolife</title>
+
+    <style>
+        body,ul,h3,h2,h4 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(120deg, 35%,rgba(0,212,255,1) 100%);
+}
+.form1{
+    width:50%;
+}
+.conta{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 20%;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.container {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h3 {
+    font-size: 45px;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+h4 {
+    font-size: 35px;
+    margin-top: 10px;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    font-size: 25px;
+    margin-top: 6px;
+}
+
+button {
+    background-color: #000fff;
+    color: #fff;
+    padding: 20px 80px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+    </style>
+  </head>
+  <body>
+    
+
+<div class="form1">
+   
+    <div class="conta">
+        <div class="container">
+            {% for i in d %}
+    {% for j in i %}
+    <br>
+    {{j.applicant_resume}}
+    <br>
+    
+    <a href="../pdf_view/{{j.company_name}}/"><button>view pdf</button></a>          
+    {% endfor %}
+    {% endfor %}
+</div>  
+        
+    </div>
+    </div>
+     
+  </body>
+</html>
