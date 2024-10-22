@@ -10,7 +10,6 @@ def index(request):
 
 @login_required(login_url="/login/")
 def home(request):
-    
     return render(request , 'index.html')
 
 def log_in(request):
@@ -63,7 +62,7 @@ def signup(request):
         user.set_password(password)
         user.save()
         messages.info(request, "User created succesfully.")
-        return redirect('/signup/')  
+        return redirect('/login/')  
 
     return render(request, 'signup2.html')
 

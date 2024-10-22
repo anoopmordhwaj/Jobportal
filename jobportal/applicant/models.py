@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+# database.
 
 class Applicant_details(models.Model):        
     applicant_name = models.CharField(max_length=50)
@@ -18,9 +19,9 @@ class Applicant_details(models.Model):
     
 class Applied_jobs(models.Model):
     Applied_id = models.IntegerField(default=0)
-    company_name = models.CharField(max_length=50, default='0000000')
+    company_name = models.CharField(max_length=50, default='')
     applicant_resume = models.FileField(upload_to="resume/",null = False, default='')
-    applicant_coverletter = models.CharField(max_length=2000, null = False, default='0000000')
+    applicant_coverletter = models.CharField(max_length=2000, null = False, default='')
 
     def __str__(self):
         return self.applicant_coverletter[:19]

@@ -107,27 +107,27 @@ class RegisterAPI(APIView):
         return Response({ "status":"True",'meassage':'User created succesfully'},status.HTTP_201_CREATED)  
 
 #tis is a api by  using decorator 
-@api_view(['GET','POST', 'PUT'])
-def view_jobs(request):
-        ''''This is ude of Docstring'''
+# @api_view(['GET','POST', 'PUT'])
+# def view_jobs(request):
+#         ''''This is ude of Docstring'''
 
-        data = Job.objects.all().values()
-        params = {'data':data}
+#         data = Job.objects.all().values()
+#         params = {'data':data}
 
-        if request.method == 'POST':
-            received_data = request.data
-            print(received_data)
-            print("YOU HIT A POST REQUEST")
-            return Response(params)
+#         if request.method == 'POST':
+#             received_data = request.data
+#             print(received_data)
+#             print("YOU HIT A POST REQUEST")
+#             return Response(params)
         
-        elif request.method == 'GET':
-            print(request.GET.get('search'))
-            print("YOU HIT A GET REQUEST")
-            return Response(params)
+#         elif request.method == 'GET':
+#             print(request.GET.get('search'))
+#             print("YOU HIT A GET REQUEST")
+#             return Response(params)
         
-        elif request.method == 'PUT':
-             print("YOU HIT A POST REQUEST")
-             return Response(params)
+#         elif request.method == 'PUT':
+#              print("YOU HIT A POST REQUEST")
+#              return Response(params)
              
 # writing an view api to push and get data in Person model
 
@@ -244,11 +244,11 @@ def applicant_details(request):
              return redirect("/applicant/view_jobs/")
     
 
-# @login_required(login_url="/login/")
-# def view_jobs(request):
-#         data = Job.objects.all().values()
-#         params = {'data':data}
-#         return render(request , "view_jobs.html",params)
+@login_required(login_url="/login/")
+def view_jobs(request):
+        data = Job.objects.all().values()
+        params = {'data':data}
+        return render(request , "view_jobs.html",params)
 
 
 
@@ -259,6 +259,7 @@ from applicant.forms import PDFFileForm
 def apply_now(request ,  myid):
 
     data = Job.objects.filter(id = myid).values()
+    print(data[0]['company_name'])
    
     if request.method == 'POST':
         form = PDFFileForm( request.POST, request.FILES )
@@ -268,6 +269,7 @@ def apply_now(request ,  myid):
             form.save()
             obj =  Applied_jobs.objects.last()
             obj.Applied_id = myid
+            obj.company_name = data[0]['company_name']
             obj.save()
             return redirect('view_jobs')
 

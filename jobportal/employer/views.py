@@ -60,13 +60,17 @@ from applicant.models import Applicant_details, Applied_jobs
 def applied_applicant(request):
 
     j = Employer_details.objects.all()
+    print(j)
     lst = []
     for i in j:
+        print(i.employer_name)
         d = Applied_jobs.objects.filter(company_name = i.company_name).values()
         lst.append(d)
     
     params = { 'd':lst }
+    print(params)
     return render(request, 'applied_applicant.html', params)
+
 
 @login_required(login_url="/login/")
 def pdf_view(request, company):

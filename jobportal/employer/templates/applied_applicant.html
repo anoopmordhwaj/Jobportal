@@ -92,6 +92,7 @@ button:hover {
   </head>
   <body>
     
+    
 
 <div class="form1">
    
@@ -100,7 +101,7 @@ button:hover {
             {% for i in d %}
     {% for j in i %}
     <br>
-    {{j.applicant_resume}}
+    {{j.company_name}}
     <br>
     
     <a href="../pdf_view/{{j.company_name}}/"><button>view pdf</button></a>          
